@@ -1,0 +1,19 @@
+html,body {
+    display: flex;
+    justify-content: center;
+    height: 100vh; /* Ensure full page height */
+  }
+
+.templates-list-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.templates-container{
+    text-align: center;
+}
+
+img{
+    height: 300px;
+    border: 1px solid black;
+}
