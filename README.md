@@ -3,7 +3,7 @@
 With this meme-bot you can create memes from the convenience of your favourite messaging apps with simple text-based commands! Currently, it's a minimum viable product, so there won't be any advanced features. This is a python, flask application, hosted on Pythonanywhere. 
 
 **Installation** 📀
-To take a quick look at the application, visit the test client I made at this [link](http://mahir41.pythonanywhere.com/test-client). You can also install the necessary dependencies and run the flask application locally, maybe even hook it up with messenger webhooks service with your own tokens.
+To take a quick look at the application, visit the test client I made at this [link](https://mahir41.pythonanywhere.com/test-client). You can also install the necessary dependencies and run the flask application locally, maybe even hook it up with messenger webhooks service with your own tokens.
 
 **Command list** ⚙️🤖<br>- GetMeme: To generate memes type GetMeme-{template code}-{your text}.<br>- GetInfo: Get a list of all commands. <br>- GetHelp: Learn how to generate memes.<br>- GetTemplateList: Get a list of all meme templates.<br>- GetAuthorInfo: Get information about the creator of this app.
 
@@ -38,7 +38,7 @@ In conclusion, the use of these patterns did make the development process very s
 
 **Front-end testing client**:
 Developed with HTML, CSS and JavaScript. 
-Link: http://mahir41.pythonanywhere.com/test-client
+Link: https://mahir41.pythonanywhere.com/test-client
 
 **Deployment and Documentation**
 This app is deployed on pythonanywhere.com for public access and version controlled with git.
