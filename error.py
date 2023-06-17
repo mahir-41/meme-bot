@@ -1,5 +1,3 @@
-import sys
-
 class Error:
     def __init__(self, text):
         self.text = text

@@ -1,0 +1,158 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('./font.ttf') format('truetype');
+}
+
+body{
+    background-color: #faeab6;
+    overflow-x: hidden;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-between;
+    font-family: 'CustomFont', sans-serif;
+}
+
+.title-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5vh;
+    height:15vh;
+    margin-left:3vw;
+    margin-right:3vw;
+    text-align: center;
+}
+
+.title-container>h3{
+    font-size: 1.3vh;
+}
+
+.title{
+    display: flex;
+    flex-direction: row;
+    gap: 2vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.title>img{
+    height:5vh;
+}
+
+.title>h1{
+    font-size:3vh;
+}
+
+#command{
+    height: 20vh;
+    width: 40vw;
+    text-align: center;
+    border: 1px solid black;
+    font-size: 2vh;
+    font-family: CustomFont;
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:25vh;
+    margin-bottom: 5vh;
+    justify-content: center;
+    font-size: 2vh;
+}
+
+.form-container>button{
+    font-size: 2vh;
+}
+
+.output-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:2vw;
+}
+
+.text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    width:25vw;
+    height: 25vh;
+    padding: 1vw;
+    padding-right: 5vw;
+    padding-left: 5vw;
+    font-size: 1.2vh;
+    color:#615D5A;
+    overflow: auto;
+}
+
+.text-container>h2{
+    color: black
+}
+
+.text-container-wrapper{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+#text > :first-child{
+    color: black;
+}
+
+.image-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    text-align: center;
+    width:25vw;
+    height: 30vh;
+    border: 1px solid black;
+    padding: 1vw;
+    padding-right: 5vw;
+    padding-left: 5vw;
+    font-size: 1.3vh;
+}
+
+.image-container>img{
+    width: 15vw;
+}
+
+.arrow-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: end;
+    height: 3vh;
+    padding:1vh;
+    animation: bounce 1s infinite;
+}
+
+.arrow{
+    height: 1vh;
+    padding-right:5px;
+    display:none;
+}
+
+.arrow.show{
+    height: 2vh;
+    padding-right:5px;
+    display:block;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        align-items: end;
+    }
+    50% {
+        align-items: start;
+    }
+  }

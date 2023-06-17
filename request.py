@@ -32,7 +32,7 @@ class Request:
             res = Response("text", "Use the following format to send meme requests: GetMeme-{template code}-{your text}. Don't miss the dashes! Send GetTemplateList for template codes.")
 
         elif(cmd == "getauthorinfo"):
-            res = Response("text", "👾 This app was created by Mahir Alam. For more info visit: https://mahir41.netlify.app/")
+            res = Response("text", "This app was created by Mahir Alam. For more info visit 👾: https://mahir41.netlify.app/")
 
         elif(cmd == ""):
             res = Response("error", error.Error("No argument found!"))

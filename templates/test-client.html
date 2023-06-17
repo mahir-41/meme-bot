@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>meme-bot</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/css/test-client.css"
+    />
+    <link
+      rel="icon"
+      href="https://freepngimg.com/thumb/meme/97579-meme-doge-free-png-hq.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="title-container">
+        <div class="title">
+          <img
+            src="https://freepngimg.com/thumb/meme/97579-meme-doge-free-png-hq.png"
+          />
+          <h1>meme-bot</h1>
+        </div>
+        <h3>
+          This bot has mainly been designed for messenger. This is just a
+          testing client.
+        </h3>
+      </div>
+
+      <form class="form-container">
+        <label for="command">Command:</label>
+        <textarea
+          id="command"
+          name="command"
+          rows="4"
+          required
+          placeholder="Welcome! Text getInfo to begin!"
+        ></textarea>
+
+        <button onclick="handleSubmit()">Submit</button>
+      </form>
+
+      <div class="output-container">
+        <div class="text-container-wrapper">
+          <div class="text-container">
+            <h2>Text</h2>
+            <div id="text"></div>
+          </div>
+
+          <div class="arrow-container">
+            <img class="arrow" src="../static/arrow.png" />
+          </div>
+        </div>
+
+        <div class="image-container">
+          <h2>Image</h2>
+          <img alt="Meme will load here" id="myImage" />
+        </div>
+      </div>
+
+      <script>
+        async function handleSubmit() {
+          event.preventDefault();
+
+          var command = document.getElementById("command").value;
+          const response = await fetch(
+            "https://mahir41.pythonanywhere.com/process?command=" + command
+          );
+          const data = await response.json();
+          console.log(data);
+
+          if (data.type == "text" || data.type == "error") {
+            var container = document.getElementById("text");
+            const date = new Date().toLocaleString("en-US") + " -> ";
+            const template = `<p>${date + data.content}</p>`;
+            container.insertAdjacentHTML("afterbegin", template);
+          } else {
+            var image = document.getElementById("myImage");
+            image.src = data.content;
+          }
+        }
+
+        const container = document.querySelector(".text-container");
+        const arrow = document.querySelector(".arrow");
+
+        function checkScrollable() {
+          const isScrollable = container.scrollHeight > container.clientHeight;
+          arrow.classList.toggle("show", isScrollable);
+        }
+
+        function observeContainer() {
+          const observer = new MutationObserver(checkScrollable);
+          observer.observe(container, { childList: true, subtree: true });
+        }
+
+        window.addEventListener("resize", checkScrollable);
+        window.addEventListener("DOMContentLoaded", observeContainer);
+      </script>
+    </div>
+  </body>
+</html>
