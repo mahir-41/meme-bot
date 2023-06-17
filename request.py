@@ -2,12 +2,12 @@ import error
 import meme
 
 class Request:
-    def __init__(self, text):
-        self.text = text
+    def __init__(self, command):
+        self.command = command
 
     def process(self):
 
-        arr = self.text.split("-")
+        arr = self.command.split("-")
 
         cmd = arr[0]
         cmd2 = arr[1] if len(arr)>=2 else ""
